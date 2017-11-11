@@ -62,5 +62,4 @@ public class Recipe {
     public void setTriedStatus(Boolean triedStatus) {
         this.triedStatus = triedStatus;
     }
-
 }

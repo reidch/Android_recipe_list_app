@@ -3,7 +3,7 @@ package com.example.carolinereid.taste_list;
 import org.junit.Before;
 import org.junit.Test;
 
-import static junit.framework.Assert.assertFalse;
+import static junit.framework.TestCase.assertFalse;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -28,7 +28,7 @@ public class RecipeTest {
     }
 
     @Test
-    public void testCanSetName(){
+    public void testCanEditName(){
         recipe.setName("Cauliflower couscous");
         assertEquals("Cauliflower couscous", recipe.getName());
     }
@@ -38,11 +38,22 @@ public class RecipeTest {
         assertEquals("https://stupideasypaleo.com/2017/06/30/curried-cauliflower-rice-recipe/", recipe.getUrl());
     }
 
-//    @Test
-//    public void testCanChangeUrl(){
-//
-//
-//
+    @Test
+    public void testCanChangeUrl() {
+        recipe.setUrl("https://smittenkitchen.com/2009/07/cantaloupe-salsa/");
+        assertEquals("https://smittenkitchen.com/2009/07/cantaloupe-salsa/", recipe.getUrl());
+    }
+
+    @Test
+    public void testHasNotes(){
+        assertEquals("great with dhal", recipe.getNotes());
+    }
+
+    @Test
+    public void testCanEditNotes(){
+        recipe.setNotes("omit sultanas");
+        assertEquals("omit sultanas", recipe.getNotes());
+    }
 
     @Test
     public void testTriedStatus(){
@@ -55,7 +66,8 @@ public class RecipeTest {
     }
 
     @Test
-    public void testHasNotes(){
-        assertEquals("great with dhal", recipe.getNotes());
+    public void testCanEditStatus(){
+        recipe2.setTriedStatus(true);
+        assertEquals(true, recipe2.getTriedStatus());
     }
 }
