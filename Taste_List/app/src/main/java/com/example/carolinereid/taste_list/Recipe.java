@@ -62,13 +62,5 @@ public class Recipe {
     public void setTriedStatus(Boolean triedStatus) {
         this.triedStatus = triedStatus;
     }
-//    public boolean statusTried() {
-//        true ("would make again", "still to try"){
-//            return "would make again"
-//        }
-//        false ("would make again", "still to try"){
-//            return "still to try"
-//        }
-//    }
 
 }

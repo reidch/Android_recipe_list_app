@@ -3,8 +3,8 @@ package com.example.carolinereid.taste_list;
 import org.junit.Before;
 import org.junit.Test;
 
+import static junit.framework.Assert.assertFalse;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 /**
@@ -19,7 +19,7 @@ public class RecipeTest {
     @Before
     public void before() {
         recipe = new Recipe(1, "Curried cauliflower rice", "https://stupideasypaleo.com/2017/06/30/curried-cauliflower-rice-recipe/", true, "great with dhal");
-        recipe2 = new Recipe(2, "shakshuka", "https://smittenkitchen.com/2010/04/shakshuka/", true, "great with dhal");
+        recipe2 = new Recipe(2, "shakshuka", "https://smittenkitchen.com/2010/04/shakshuka/", false, "recommended by Sue");
     }
 
     @Test
@@ -27,15 +27,22 @@ public class RecipeTest {
         assertEquals("Curried cauliflower rice", recipe.getName());
     }
 
-//    @Test
-//    public void testCanSetName(){
-//
-//    }
+    @Test
+    public void testCanSetName(){
+        recipe.setName("Cauliflower couscous");
+        assertEquals("Cauliflower couscous", recipe.getName());
+    }
 
     @Test
     public void testHasUrl(){
         assertEquals("https://stupideasypaleo.com/2017/06/30/curried-cauliflower-rice-recipe/", recipe.getUrl());
     }
+
+//    @Test
+//    public void testCanChangeUrl(){
+//
+//
+//
 
     @Test
     public void testTriedStatus(){
@@ -43,13 +50,12 @@ public class RecipeTest {
     }
 
     @Test
-    public void testHasNotes(){
-        assertEquals("great with dhal", recipe.getNotes());
+    public void testUntriedStatus(){
+        assertFalse(recipe2.getTriedStatus());
     }
 
     @Test
-    public void testUntriedStatus(){
-        Recipe recipe2 = new Recipe();
-        assertFalse(recipe.getTriedStatus());
+    public void testHasNotes(){
+        assertEquals("great with dhal", recipe.getNotes());
     }
 }
