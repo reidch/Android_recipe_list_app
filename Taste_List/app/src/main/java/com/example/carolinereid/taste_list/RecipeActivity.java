@@ -53,3 +53,4 @@ public class RecipeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 }
+
