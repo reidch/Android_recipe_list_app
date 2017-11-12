@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.carolinereid.taste_list.RecipeActivity"
-    android:onClick="getRecipe">
+    tools:context="com.example.carolinereid.taste_list.RecipeActivity">
 
     <ListView
         android:id="@+id/recipe_list"
