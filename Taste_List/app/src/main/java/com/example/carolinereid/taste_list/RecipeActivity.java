@@ -5,13 +5,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 public class RecipeActivity extends AppCompatActivity {
 
     TextView nameTV;
     TextView urlTV;
-//    triedStatus
+//    CheckBox triedCB;
     TextView notesTV;
     Bundle extras;
 //    ImageView imageIV;
@@ -28,12 +29,23 @@ public class RecipeActivity extends AppCompatActivity {
 
         nameTV = (TextView) findViewById(R.id.name);
         urlTV = (TextView) findViewById(R.id.url);
+//        triedCB = (CheckBox) findViewById(R.id.triedStatus);
         notesTV = (TextView) findViewById(R.id.notes);
+
+//        if (checkBox.isChecked()) {
+//            checkBox.setChecked(false);
+//        }
 
         nameTV.setText(name);
         urlTV.setText(url);
         notesTV.setText(notes);
     }
+
+//    public void onCheckboxClicked(View checkbox) {
+//        boolean checked = ((CheckBox) view).isChecked();
+//
+//
+//    }
 
     public void deleteRecipe(View button){
         Integer id = extras.getInt("id");
