@@ -28,7 +28,7 @@ public class RecipeActivity extends AppCompatActivity {
         nameTV = (TextView) findViewById(R.id.name);
         urlTV = (TextView) findViewById(R.id.url);
 //        triedCB = (CheckBox) findViewById(R.id.triedStatus);
-        notesTV = (TextView) findViewById(R.id.notesTV);
+        notesTV = (TextView) findViewById(R.id.notes);
 
 //        if (checkBox.isChecked()) {
 //            checkBox.setChecked(false);

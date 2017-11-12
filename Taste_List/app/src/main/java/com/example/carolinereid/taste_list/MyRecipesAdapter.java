@@ -30,7 +30,7 @@ public class MyRecipesAdapter extends ArrayAdapter<Recipe> {
         url.setText(currentRecipe.getUrl());
 //        TextView triedStatus = (TextView)listItemView.findViewById(R.id.triedStatus);
 //        triedStatus.setText(currentRecipe.getTriedStatus());
-        TextView notes = (TextView)listItemView.findViewById(R.id.notesTV);
+        TextView notes = (TextView)listItemView.findViewById(R.id.notes);
         notes.setText(currentRecipe.getNotes());
 
         listItemView.setTag(currentRecipe);
