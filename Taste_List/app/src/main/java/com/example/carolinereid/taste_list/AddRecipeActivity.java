@@ -16,9 +16,9 @@ public class AddRecipeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_recipe);
-        editName = (EditText)findViewById(R.id.editName);
-        editUrl = (EditText)findViewById(R.id.editUrl);
-        editNotes = (EditText)findViewById(R.id.editNotes);
+        editName = (EditText)findViewById(R.id.name);
+        editUrl = (EditText)findViewById(R.id.url);
+        editNotes = (EditText)findViewById(R.id.notes);
     }
 
     public void addRecipe(View button){
