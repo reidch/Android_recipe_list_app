@@ -26,10 +26,6 @@ public class MyRecipesAdapter extends ArrayAdapter<Recipe> {
         Recipe currentRecipe = getItem(position);
         TextView name = (TextView)listItemView.findViewById(R.id.name);
         name.setText(currentRecipe.getName());
-        TextView url = (TextView)listItemView.findViewById(R.id.url);
-        url.setText(currentRecipe.getUrl());
-        TextView notes = (TextView)listItemView.findViewById(R.id.notes);
-        notes.setText(currentRecipe.getNotes());
 
         listItemView.setTag(currentRecipe);
 

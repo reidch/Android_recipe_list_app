@@ -33,14 +33,14 @@ public class Recipe {
 //        this.notes = notes;
 //    }
 
-    public Recipe(Integer id, String name, String url, String notes) {
+    public Recipe(int id, String name, String url, String notes) {
         this.id = id;
         this.name = name;
         this.url = url;
         this.notes = notes;
     }
 
-    public Integer getId() {
+    public int getId() {
         return this.id;
     }
 
