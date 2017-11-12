@@ -22,28 +22,11 @@ public class MyRecipesActivity extends AppCompatActivity {
         listView.setAdapter(recipeAdapter);
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu){
-//        MenuInflater menuInflater = getMenuInflater();
-//        menuInflater.inflate(R.menu.activity_main, menu);
-//        return true;
-//    }
-//
-//    public boolean onOptionsItemSelected(MenuItem item){
-//        if(item.getItemId() == R.id.add_recipe){
-//            Intent intent = new Intent(this, AddRecipeActivity.class);
-//            startActivity(intent);
-//            return true;
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
-
     public void getRecipe(View listItem){
         Recipe recipe = (Recipe) listItem.getTag();
         Intent i = new Intent(this, RecipeActivity.class);
         i.putExtra("name", recipe.getName());
         i.putExtra("url", recipe.getUrl());
-//        i.putExtra("triedStatus", recipe.getTriedStatus());
         i.putExtra("notes", recipe.getNotes());
         i.putExtra("id", recipe.getId());
         startActivity(i);
