@@ -28,9 +28,9 @@ public class MyRecipesAdapter extends ArrayAdapter<Recipe> {
         name.setText(currentRecipe.getName());
         TextView url = (TextView)listItemView.findViewById(R.id.url);
         url.setText(currentRecipe.getUrl());
-        TextView triedStatus = (TextView)listItemView.findViewById(R.id.triedStatus);
-        triedStatus.setText(currentRecipe.getTriedStatus());
-        TextView notes = (TextView)listItemView.findViewById(R.id.notes);
+//        TextView triedStatus = (TextView)listItemView.findViewById(R.id.triedStatus);
+//        triedStatus.setText(currentRecipe.getTriedStatus());
+        TextView notes = (TextView)listItemView.findViewById(R.id.notesTV);
         notes.setText(currentRecipe.getNotes());
 
         listItemView.setTag(currentRecipe);

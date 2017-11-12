@@ -12,7 +12,8 @@ public class MyRecipes {
 
     public MyRecipes() {
         list = new ArrayList<Recipe>();
-        list.add(new Recipe(1, "Curried cauliflower rice", "https://stupideasypaleo.com/2017/06/30/curried-cauliflower-rice-recipe/", true, "great with dhal"));
+//        list.add(new Recipe(1, "Curried cauliflower rice", "https://stupideasypaleo.com/2017/06/30/curried-cauliflower-rice-recipe/", true, "great with dhal"));
+        list.add(new Recipe(1, "Curried cauliflower rice", "https://stupideasypaleo.com/2017/06/30/curried-cauliflower-rice-recipe/", "great with dhal"));
     }
 
     public ArrayList<Recipe> getList() {

@@ -33,7 +33,7 @@ public class MyRecipesActivity extends AppCompatActivity {
     }
 
     public boolean onOptionsItemSelected(MenuItem item){
-        if(item.getItemId() == R.id.add_recipe){
+        if(item.getItemId() == R.id.addRecipeBtn){
             Intent intent = new Intent(this, AddRecipeActivity.class);
             startActivity(intent);
             return true;
@@ -46,7 +46,7 @@ public class MyRecipesActivity extends AppCompatActivity {
         Intent i = new Intent(this, RecipeActivity.class);
         i.putExtra("name", recipe.getName());
         i.putExtra("url", recipe.getUrl());
-        i.putExtra("triedStatus", recipe.getTriedStatus());
+//        i.putExtra("triedStatus", recipe.getTriedStatus());
         i.putExtra("notes", recipe.getNotes());
         i.putExtra("id", recipe.getId());
         startActivity(i);

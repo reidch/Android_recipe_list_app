@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Recipe Pot</string>
+    <string name="save">SAVE</string>
+    <string name="notes">notes</string>
+    <string name="add_any_notes_or_tips">add any notes or tips</string>
+    <string name="enter_link_to_recipe">enter link to recipe</string>
+    <string name="enter_recipe_name">enter recipe name</string>
+    <string name="recipe_name">recipe name</string>
+    <string name="link">link</string>
+    <string name="notesTV">notes</string>
+    <string name="delete">DELETE</string>
 </resources>

@@ -1,11 +1,9 @@
 package com.example.carolinereid.taste_list;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.CheckBox;
 import android.widget.TextView;
 
 public class RecipeActivity extends AppCompatActivity {
@@ -30,7 +28,7 @@ public class RecipeActivity extends AppCompatActivity {
         nameTV = (TextView) findViewById(R.id.name);
         urlTV = (TextView) findViewById(R.id.url);
 //        triedCB = (CheckBox) findViewById(R.id.triedStatus);
-        notesTV = (TextView) findViewById(R.id.notes);
+        notesTV = (TextView) findViewById(R.id.notesTV);
 
 //        if (checkBox.isChecked()) {
 //            checkBox.setChecked(false);
