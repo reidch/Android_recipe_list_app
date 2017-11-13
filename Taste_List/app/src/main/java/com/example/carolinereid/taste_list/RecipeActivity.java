@@ -4,16 +4,21 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Switch;
 import android.widget.TextView;
 
 public class RecipeActivity extends AppCompatActivity {
 
     TextView nameTV;
     TextView urlTV;
-//    CheckBox triedCB;
     TextView notesTV;
+    Switch switchStatus;
     Bundle extras;
-//    ImageView imageIV;
+    String name;
+    String url;
+    String notes;
+    Boolean triedStatus;
+    Integer id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,29 +26,25 @@ public class RecipeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_recipe);
         extras = getIntent().getExtras();
 
-        String name = extras.getString("name");
-        String url = extras.getString("url");
-        String notes = extras.getString("notes");
+        name = extras.getString("name");
+        url = extras.getString("url");
+        notes = extras.getString("notes");
+        triedStatus = extras.getBoolean("triedStatus");
 
         nameTV = (TextView) findViewById(R.id.name);
         urlTV = (TextView) findViewById(R.id.url);
-//        triedCB = (CheckBox) findViewById(R.id.triedStatus);
         notesTV = (TextView) findViewById(R.id.notes);
-
-//        if (checkBox.isChecked()) {
-//            checkBox.setChecked(false);
-//        }
+        switchStatus = (Switch) findViewById(R.id.triedStatus);
 
         nameTV.setText(name);
         urlTV.setText(url);
         notesTV.setText(notes);
+        switchStatus.setChecked(triedStatus);
     }
 
-//    public void onCheckboxClicked(View checkbox) {
-//        boolean checked = ((CheckBox) view).isChecked();
-//
-//
-//    }
+    public void updateRecipe(View button){
+
+    }
 
     public void deleteRecipe(View button){
         Integer id = extras.getInt("id");

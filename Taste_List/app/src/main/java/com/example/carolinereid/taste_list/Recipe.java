@@ -9,35 +9,22 @@ public class Recipe {
     private Integer id;
     private String name;
     private String url;
-//    private Boolean triedStatus;
     private String notes;
-
-//    public Recipe(String name, String url, Boolean triedStatus, String notes) {
-//        this.name = name;
-//        this.url = url;
-//        this.triedStatus = triedStatus;
-//        this.notes = notes;
-//    }
+    private Boolean triedStatus;
 
     public Recipe(String name, String url, String notes) {
         this.name = name;
         this.url = url;
         this.notes = notes;
+        this.triedStatus = false;
     }
 
-//    public Recipe(Integer id, String name, String url, Boolean triedStatus, String notes) {
-//        this.id = id;
-//        this.name = name;
-//        this.url = url;
-//        this.triedStatus = triedStatus;
-//        this.notes = notes;
-//    }
-
-    public Recipe(int id, String name, String url, String notes) {
+    public Recipe(Integer id, String name, String url, String notes, Boolean triedStatus) {
         this.id = id;
         this.name = name;
         this.url = url;
         this.notes = notes;
+        this.triedStatus = triedStatus;
     }
 
     public int getId() {
@@ -68,11 +55,11 @@ public class Recipe {
         this.notes = notes;
     }
 
-//    public Boolean getTriedStatus() {
-//        return this.triedStatus;
-//    }
-//
-//    public void setTriedStatus(Boolean triedStatus) {
-//        this.triedStatus = triedStatus;
-//    }
+    public Boolean getTriedStatus() {
+        return this.triedStatus;
+    }
+
+    public void setTriedStatus(Boolean triedStatus) {
+        this.triedStatus = triedStatus;
+    }
 }

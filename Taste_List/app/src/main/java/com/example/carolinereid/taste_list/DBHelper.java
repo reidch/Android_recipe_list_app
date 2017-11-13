@@ -20,11 +20,12 @@ public class DBHelper extends SQLiteOpenHelper{
     public static final String RECIPES_COLUMN_NAME = "name";
     public static final String RECIPES_COLUMN_URL = "url";
     public static final String RECIPES_COLUMN_NOTES = "notes";
+    public static final String RECIPES_COLUMN_TRIEDSTATUS = "triedStatus";
 
-    public DBHelper(Context context) { super(context, DATABASE_NAME, null, 1); }
+    public DBHelper(Context context) { super(context, DATABASE_NAME, null, 2); }
 
     public void onCreate(SQLiteDatabase db){
-        db.execSQL("CREATE TABLE " + RECIPES_TABLE_NAME + "(id INTEGER primary key autoincrement, name TEXT, url TEXT, notes TEXT)");
+        db.execSQL("CREATE TABLE " + RECIPES_TABLE_NAME + "(id INTEGER primary key autoincrement, name TEXT, url TEXT, notes TEXT, triedStatus BOOLEAN)");
     }
 
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
@@ -32,12 +33,13 @@ public class DBHelper extends SQLiteOpenHelper{
         onCreate(db);
     }
 
-    public boolean save(String name, String url, String notes){
+    public boolean save(String name, String url, String notes, Boolean triedStatus){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(RECIPES_COLUMN_NAME, name);
         contentValues.put(RECIPES_COLUMN_URL, url);
         contentValues.put(RECIPES_COLUMN_NOTES, notes);
+        contentValues.put(RECIPES_COLUMN_TRIEDSTATUS, triedStatus);
         db.insert(RECIPES_TABLE_NAME, null, contentValues);
         return true;
     }
@@ -51,8 +53,25 @@ public class DBHelper extends SQLiteOpenHelper{
             String name = cursor.getString(cursor.getColumnIndex(RECIPES_COLUMN_NAME));
             String url = cursor.getString(cursor.getColumnIndex(RECIPES_COLUMN_URL));
             String notes = cursor.getString(cursor.getColumnIndex(RECIPES_COLUMN_NOTES));
-            Recipe recipe = new Recipe(id, name, url, notes);
+            Boolean triedStatus = cursor.getInt(cursor.getColumnIndex(RECIPES_COLUMN_TRIEDSTATUS)) > 0;
+            Recipe recipe = new Recipe(id, name, url, notes, triedStatus);
             recipes.add(recipe);
+        }
+        cursor.close();
+        return recipes;
+    }
+
+    public boolean update(Integer id, String name, String url, String notes, Boolean triedStatus){
+        SQLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("UPDATE recipes SET (" + RECIPES_TABLE_NAME, null);
+        while(cursor.moveToNext()){
+            Integer id = cursor.getInt(cursor.getColumnIndex(RECIPES_COLUMN_ID));
+            String name = cursor.getString(cursor.getColumnIndex(RECIPES_COLUMN_NAME));
+            String url = cursor.getString(cursor.getColumnIndex(RECIPES_COLUMN_URL));
+            String notes = cursor.getString(cursor.getColumnIndex(RECIPES_COLUMN_NOTES));
+            Boolean triedStatus = cursor.getInt(cursor.getColumnIndex(RECIPES_COLUMN_TRIEDSTATUS)) > 0;
+            Recipe recipe = new Recipe(id, name, url, notes, triedStatus);
+            recipes.update(recipe);
         }
         cursor.close();
         return recipes;

@@ -3,8 +3,8 @@ package com.example.carolinereid.taste_list;
 import org.junit.Before;
 import org.junit.Test;
 
-import static junit.framework.TestCase.assertFalse;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 /**
@@ -18,8 +18,8 @@ public class RecipeTest {
 
     @Before
     public void before() {
-        recipe = new Recipe(1, "Curried cauliflower rice", "https://stupideasypaleo.com/2017/06/30/curried-cauliflower-rice-recipe/", true, "great with dhal");
-        recipe2 = new Recipe(2, "shakshuka", "https://smittenkitchen.com/2010/04/shakshuka/", false, "recommended by Sue");
+        recipe = new Recipe(1, "Curried cauliflower rice", "https://stupideasypaleo.com/2017/06/30/curried-cauliflower-rice-recipe/", "great with dhal", true);
+        recipe2 = new Recipe(2, "shakshuka", "https://smittenkitchen.com/2010/04/shakshuka/", "recommended by Sue", false);
     }
 
     @Test

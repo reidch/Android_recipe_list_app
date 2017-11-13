@@ -51,6 +51,26 @@
         app:layout_constraintVertical_bias="0.087"
         tools:text="notes" />
 
+    <Switch
+        android:id="@+id/triedStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="66dp"
+        android:checked="false"
+        android:showText="true"
+        android:textOff="try me!"
+        android:textOn="favourite"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/add_recipe"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notes"
+        app:layout_constraintVertical_bias="0.571"
+        tools:text="triedStatus" />
+
     <Button
         android:id="@+id/deleteBtn"
         android:layout_width="wrap_content"

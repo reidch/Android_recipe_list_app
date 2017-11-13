@@ -26,7 +26,7 @@ public class AddRecipeActivity extends AppCompatActivity {
         String name = editName.getText().toString();
         String url = editUrl.getText().toString();
         String notes = editNotes.getText().toString();
-        dbHelper.save(name, url, notes);
+        dbHelper.save(name, url, notes, false);
         Intent intent = new Intent(this, MyRecipesActivity.class);
         startActivity(intent);
     }

@@ -28,6 +28,7 @@ public class MyRecipesActivity extends AppCompatActivity {
         i.putExtra("name", recipe.getName());
         i.putExtra("url", recipe.getUrl());
         i.putExtra("notes", recipe.getNotes());
+        i.putExtra("triedStatus", recipe.getTriedStatus());
         i.putExtra("id", recipe.getId());
         startActivity(i);
     }
