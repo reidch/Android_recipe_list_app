@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -36,35 +37,22 @@ public class RecipeActivity extends AppCompatActivity {
         urlTV = (TextView) findViewById(R.id.url);
         notesTV = (TextView) findViewById(R.id.notes);
         switchStatus = (Switch) findViewById(R.id.triedStatus);
-//        switchStatus.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                DBHelper dbHelper = new DBHelper(RecipeActivity.this);
-//                String name = nameTV.getText().toString();
-//                String url = urlTV.getText().toString();
-//                String notes = notesTV.getText().toString();
-//                triedStatus = switchStatus.isChecked();
-//                dbHelper.update(id, name, url, notes, true);
-//                Intent intent = new Intent(RecipeActivity.this, MyRecipesActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        switchStatus.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                DBHelper dbHelper = new DBHelper(RecipeActivity.this);
+                String name = nameTV.getText().toString();
+                String url = urlTV.getText().toString();
+                String notes = notesTV.getText().toString();
+                triedStatus = switchStatus.isChecked();
+                dbHelper.update(id, name, url, notes, isChecked);
+            }
+        });
 
         nameTV.setText(name);
         urlTV.setText(url);
         notesTV.setText(notes);
         switchStatus.setChecked(triedStatus);
-    }
-
-    public void updateRecipe(View button){
-        DBHelper dbHelper = new DBHelper(RecipeActivity.this);
-        String name = nameTV.getText().toString();
-        String url = urlTV.getText().toString();
-        String notes = notesTV.getText().toString();
-        triedStatus = switchStatus.isChecked();
-        dbHelper.update(id, name, url, notes, true);
-        Intent intent = new Intent(RecipeActivity.this, MyRecipesActivity.class);
-        startActivity(intent);
     }
 
     public void deleteRecipe(View button){
