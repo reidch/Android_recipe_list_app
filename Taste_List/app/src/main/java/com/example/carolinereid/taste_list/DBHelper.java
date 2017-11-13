@@ -61,20 +61,17 @@ public class DBHelper extends SQLiteOpenHelper{
         return recipes;
     }
 
-    public boolean update(Integer id, String name, String url, String notes, Boolean triedStatus){
-        SQLiteDatabase = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("UPDATE recipes SET (" + RECIPES_TABLE_NAME, null);
-        while(cursor.moveToNext()){
-            Integer id = cursor.getInt(cursor.getColumnIndex(RECIPES_COLUMN_ID));
-            String name = cursor.getString(cursor.getColumnIndex(RECIPES_COLUMN_NAME));
-            String url = cursor.getString(cursor.getColumnIndex(RECIPES_COLUMN_URL));
-            String notes = cursor.getString(cursor.getColumnIndex(RECIPES_COLUMN_NOTES));
-            Boolean triedStatus = cursor.getInt(cursor.getColumnIndex(RECIPES_COLUMN_TRIEDSTATUS)) > 0;
-            Recipe recipe = new Recipe(id, name, url, notes, triedStatus);
-            recipes.update(recipe);
-        }
-        cursor.close();
-        return recipes;
+    public void update(Integer id, String name, String url, String notes, Boolean triedStatus){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(RECIPES_COLUMN_ID, id);
+        contentValues.put(RECIPES_COLUMN_NAME, name);
+        contentValues.put(RECIPES_COLUMN_URL, url);
+        contentValues.put(RECIPES_COLUMN_NOTES, notes);
+        contentValues.put(RECIPES_COLUMN_TRIEDSTATUS, triedStatus);
+        String selection = " id = ?";
+        String values[] = {id.toString()};
+        db.update(RECIPES_TABLE_NAME, contentValues, selection, values);
     }
 
 //    public void ArrayList<Recipe> randomRecipe(){
