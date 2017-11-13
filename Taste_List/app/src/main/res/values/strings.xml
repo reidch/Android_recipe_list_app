@@ -9,4 +9,7 @@
     <string name="link">link</string>
     <string name="notesTV">notes</string>
     <string name="delete">DELETE</string>
+    <string name="inspire_me">inspire me!</string>
+    <string name="view_recipes">view recipes</string>
+    <string name="add_recipe">add recipe</string>
 </resources>

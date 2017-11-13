@@ -27,11 +27,9 @@ public class HomeActivity extends AppCompatActivity {
     }
 
 //    public void randomRecipe(View button) {
-//        Intent intent = new Intent();
+//        Intent intent = new Intent(this, MyRecipesActivity.class);
 //        startActivity(intent);
 //    }
-
-//    plus randomRecipe function
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){

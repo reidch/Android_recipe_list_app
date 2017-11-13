@@ -16,6 +16,10 @@ public class MyRecipesActivity extends AppCompatActivity {
         setContentView(R.layout.recipes_list);
         DBHelper dbHelper = new DBHelper(this);
         ArrayList<Recipe> recipeList = dbHelper.all();
+        dbHelper.save("Oatmeal Pumpkin Pancakes", "https://myheartbeets.com/gluten-free-oatmeal-pumpkin-pancakes/", "recommended by Sue", false);
+        dbHelper.save("Asian Chicken Cabbage Salad", "https://iheartumami.com/paleo-asian-chicken-cabbage-salad/", "great for lunches", true);
+        dbHelper.save("Shakshuka", "https://thedomesticman.com/2017/09/26/shakshuka/", "delicious!", true);
+        dbHelper.save("Curried Cauliflower Rice", "https://stupideasypaleo.com/2017/06/30/curried-cauliflower-rice-recipe/", "great with dhal", true);
 
         MyRecipesAdapter recipeAdapter = new MyRecipesAdapter(this, recipeList);
         ListView listView = (ListView)findViewById(R.id.recipe_list);
