@@ -12,4 +12,5 @@
     <string name="inspire_me">inspire me!</string>
     <string name="view_recipes">view recipes</string>
     <string name="add_recipe">add recipe</string>
+    <string name="update">update</string>
 </resources>

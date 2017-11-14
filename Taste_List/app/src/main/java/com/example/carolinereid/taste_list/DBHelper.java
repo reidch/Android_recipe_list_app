@@ -74,6 +74,16 @@ public class DBHelper extends SQLiteOpenHelper{
         db.update(RECIPES_TABLE_NAME, contentValues, selection, values);
     }
 
+    public void updateNotes(Integer id, String notes){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(RECIPES_COLUMN_ID, id);
+        contentValues.put(RECIPES_COLUMN_NOTES, notes);
+        String selection = " id = ?";
+        String values[] = {id.toString()};
+        db.update(RECIPES_TABLE_NAME, contentValues, selection, values);
+    }
+
     public void delete(Integer id){
         SQLiteDatabase db = this.getWritableDatabase();
         String selection = " id = ?";

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -12,7 +13,7 @@ public class RecipeActivity extends AppCompatActivity {
 
     TextView nameTV;
     TextView urlTV;
-    TextView notesTV;
+//    TextView notesTV;
     Switch switchStatus;
     Bundle extras;
     String name;
@@ -20,6 +21,7 @@ public class RecipeActivity extends AppCompatActivity {
     String notes;
     Boolean triedStatus;
     Integer id;
+    EditText editNotes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +37,8 @@ public class RecipeActivity extends AppCompatActivity {
 
         nameTV = (TextView) findViewById(R.id.name);
         urlTV = (TextView) findViewById(R.id.url);
-        notesTV = (TextView) findViewById(R.id.notes);
+//        notesTV = (TextView) findViewById(R.id.notes);
+        editNotes = (EditText) findViewById(R.id.editNotes);
         switchStatus = (Switch) findViewById(R.id.triedStatus);
         switchStatus.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
             @Override
@@ -43,7 +46,7 @@ public class RecipeActivity extends AppCompatActivity {
                 DBHelper dbHelper = new DBHelper(RecipeActivity.this);
                 String name = nameTV.getText().toString();
                 String url = urlTV.getText().toString();
-                String notes = notesTV.getText().toString();
+//                String notes = notesTV.getText().toString();
                 triedStatus = switchStatus.isChecked();
                 dbHelper.update(id, name, url, notes, isChecked);
             }
@@ -51,8 +54,17 @@ public class RecipeActivity extends AppCompatActivity {
 
         nameTV.setText(name);
         urlTV.setText(url);
-        notesTV.setText(notes);
+//        notesTV.setText(notes);
+        editNotes.setText(notes);
         switchStatus.setChecked(triedStatus);
+    }
+
+    public void updateNotes(View button){
+        DBHelper dbHelper = new DBHelper(this);
+        String notes = editNotes.getText().toString();
+        dbHelper.updateNotes(id, notes);
+
+//        notesTV.setText(notes);
     }
 
     public void deleteRecipe(View button){
