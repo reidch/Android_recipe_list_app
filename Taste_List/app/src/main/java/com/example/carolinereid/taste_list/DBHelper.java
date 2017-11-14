@@ -74,23 +74,6 @@ public class DBHelper extends SQLiteOpenHelper{
         db.update(RECIPES_TABLE_NAME, contentValues, selection, values);
     }
 
-//    public ArrayList<Recipe> randomRecipe(){
-//        ArrayList<Recipe> recipes = new ArrayList<>();
-//        SQLiteDatabase db = this.getReadableDatabase();
-//        Cursor cursor = db.rawQuery("SELECT * FROM " + RECIPES_TABLE_NAME + "ORDER BY RAND() LIMIT 1", null);
-//        while(cursor.moveToNext()){
-//            Integer id = cursor.getInt(cursor.getColumnIndex(RECIPES_COLUMN_ID));
-//            String name = cursor.getString(cursor.getColumnIndex(RECIPES_COLUMN_NAME));
-//            String url = cursor.getString(cursor.getColumnIndex(RECIPES_COLUMN_URL));
-//            String notes = cursor.getString(cursor.getColumnIndex(RECIPES_COLUMN_NOTES));
-//            Boolean triedStatus = cursor.getInt(cursor.getColumnIndex(RECIPES_COLUMN_TRIEDSTATUS)) > 0;
-//            Recipe recipe = new Recipe(id, name, url, notes, triedStatus);
-//            recipes.add(recipe);
-//        }
-//        cursor.close();
-//        return recipes;
-//    }
-
     public void delete(Integer id){
         SQLiteDatabase db = this.getWritableDatabase();
         String selection = " id = ?";

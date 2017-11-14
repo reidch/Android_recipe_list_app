@@ -30,4 +30,6 @@ public class AddRecipeActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MyRecipesActivity.class);
         startActivity(intent);
     }
+
+
 }

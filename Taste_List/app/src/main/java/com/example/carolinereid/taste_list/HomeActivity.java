@@ -26,11 +26,6 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-//    public void randomRecipe(View button) {
-//        Intent intent = new Intent(this, MyRecipesActivity.class);
-//        startActivity(intent);
-//    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater menuInflater = getMenuInflater();
