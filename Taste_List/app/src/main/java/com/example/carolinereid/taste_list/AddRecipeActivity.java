@@ -29,6 +29,8 @@ public class AddRecipeActivity extends AppCompatActivity {
         dbHelper.save(name, url, notes, false);
         Intent intent = new Intent(this, MyRecipesActivity.class);
         startActivity(intent);
+
+//        Toast.makeText(AddRecipeActivity.this, R.string.menu_toast_added, Toast.LENGTH_LONG).show();
     }
 
 

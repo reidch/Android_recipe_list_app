@@ -11,6 +11,7 @@
     <string name="delete">DELETE</string>
     <string name="view_recipes">view recipes</string>
     <string name="add_recipe">add recipe</string>
+    <string name="menu_toast_added">recipe added to the pot</string>
     <string name="update">update</string>
     <string name="menu_toast_updated">recipe notes updated</string>
 </resources>
