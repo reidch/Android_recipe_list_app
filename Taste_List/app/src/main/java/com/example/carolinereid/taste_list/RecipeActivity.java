@@ -13,7 +13,6 @@ public class RecipeActivity extends AppCompatActivity {
 
     TextView nameTV;
     TextView urlTV;
-//    TextView notesTV;
     Switch switchStatus;
     Bundle extras;
     String name;
@@ -37,7 +36,6 @@ public class RecipeActivity extends AppCompatActivity {
 
         nameTV = (TextView) findViewById(R.id.name);
         urlTV = (TextView) findViewById(R.id.url);
-//        notesTV = (TextView) findViewById(R.id.notes);
         editNotes = (EditText) findViewById(R.id.editNotes);
         switchStatus = (Switch) findViewById(R.id.triedStatus);
         switchStatus.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
@@ -46,7 +44,6 @@ public class RecipeActivity extends AppCompatActivity {
                 DBHelper dbHelper = new DBHelper(RecipeActivity.this);
                 String name = nameTV.getText().toString();
                 String url = urlTV.getText().toString();
-//                String notes = notesTV.getText().toString();
                 triedStatus = switchStatus.isChecked();
                 dbHelper.update(id, name, url, notes, isChecked);
             }
@@ -54,7 +51,6 @@ public class RecipeActivity extends AppCompatActivity {
 
         nameTV.setText(name);
         urlTV.setText(url);
-//        notesTV.setText(notes);
         editNotes.setText(notes);
         switchStatus.setChecked(triedStatus);
     }
@@ -63,8 +59,6 @@ public class RecipeActivity extends AppCompatActivity {
         DBHelper dbHelper = new DBHelper(this);
         String notes = editNotes.getText().toString();
         dbHelper.updateNotes(id, notes);
-
-//        notesTV.setText(notes);
     }
 
     public void deleteRecipe(View button){

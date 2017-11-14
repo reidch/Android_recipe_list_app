@@ -26,8 +26,6 @@ public class MyRecipesAdapter extends ArrayAdapter<Recipe> {
         Recipe currentRecipe = getItem(position);
         TextView name = (TextView)listItemView.findViewById(R.id.name);
         name.setText(currentRecipe.getName());
-//        Switch triedStatus = (Switch)listItemView.findViewById(R.id.triedStatus);
-//        triedStatus.setChecked(currentRecipe.getTriedStatus());
 
         listItemView.setTag(currentRecipe);
 
