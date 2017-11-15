@@ -8,6 +8,7 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class RecipeActivity extends AppCompatActivity {
 
@@ -60,7 +61,7 @@ public class RecipeActivity extends AppCompatActivity {
         String notes = editNotes.getText().toString();
         dbHelper.updateNotes(id, notes);
 
-//        Toast.makeText(RecipeActivity.this, R.string.menu_toast_updated, Toast.LENGTH_LONG).show();
+        Toast.makeText(RecipeActivity.this, R.string.menu_toast_updated, Toast.LENGTH_LONG).show();
     }
 
     public void deleteRecipe(View button){
@@ -69,6 +70,8 @@ public class RecipeActivity extends AppCompatActivity {
         dbHelper.delete(id);
         Intent intent = new Intent(this, MyRecipesActivity.class);
         startActivity(intent);
+
+        Toast.makeText(RecipeActivity.this, R.string.menu_toast_deleted, Toast.LENGTH_SHORT).show();
     }
 }
 

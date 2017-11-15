@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class AddRecipeActivity extends AppCompatActivity {
 
@@ -30,7 +31,7 @@ public class AddRecipeActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MyRecipesActivity.class);
         startActivity(intent);
 
-//        Toast.makeText(AddRecipeActivity.this, R.string.menu_toast_added, Toast.LENGTH_LONG).show();
+        Toast.makeText(AddRecipeActivity.this, R.string.menu_toast_added, Toast.LENGTH_LONG).show();
     }
 
 

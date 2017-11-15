@@ -9,6 +9,7 @@
     <string name="link">link</string>
     <string name="notesTV">notes</string>
     <string name="delete">DELETE</string>
+    <string name="menu_toast_deleted">recipe deleted</string>
     <string name="view_recipes">view recipes</string>
     <string name="add_recipe">add recipe</string>
     <string name="menu_toast_added">recipe added to the pot</string>
