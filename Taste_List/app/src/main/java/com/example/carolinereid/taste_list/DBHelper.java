@@ -22,7 +22,7 @@ public class DBHelper extends SQLiteOpenHelper{
     public static final String RECIPES_COLUMN_NOTES = "notes";
     public static final String RECIPES_COLUMN_TRIEDSTATUS = "triedStatus";
 
-    public DBHelper(Context context) { super(context, DATABASE_NAME, null, 15); }
+    public DBHelper(Context context) { super(context, DATABASE_NAME, null, 16); }
 
     public void onCreate(SQLiteDatabase db){
         db.execSQL("CREATE TABLE " + RECIPES_TABLE_NAME + "(id INTEGER primary key autoincrement, name TEXT, url TEXT, notes TEXT, triedStatus BOOLEAN)");
