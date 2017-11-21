@@ -13,6 +13,8 @@ You are required to write an Android app which will allow the user to maintain a
 
 THE PROJECT
 
+I initially named the app Taste List but I decided that this was too close to tasteless and therefore had negative connotations so I renamed it Recipe Pot which was well received by the friends and peers I showed it to.
+
 I am applying this to something I enjoy doing in my spare time - cooking. As a keen cook and a user of my phone/laptop in the kitchen and in the supermarket, it would be good to have one dedicated place for collecting recipes for later use. I applied this to the To-do List spec for my first substantial Java/Android project.
 
 Using Trello to track my own progress and that of the development of the app.
