@@ -19,7 +19,7 @@ I am applying this to something I enjoy doing in my spare time - cooking. As a k
 
 Using Trello to track my own progress and that of the development of the app.
 
-I derived great satisfaction from producing a functional app which solved a problem. I'm even considering buying an Android tablet so that I can use my app to collect my own favourite recipes and then cook them in my kitchen. Friends and family were impressed and I found this very rewarding.
+I derived great satisfaction from producing a functional app which solved a problem. I'm even considering buying an Android tablet so that I can use my app to collect my own favourite recipes and then cook them in my kitchen. Friends and family were impressed and I found the whole process very rewarding.
 
 
 LEARNING POINTS
