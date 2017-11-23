@@ -22,6 +22,11 @@ Using Trello to track my own progress and that of the development of the app.
 I derived great satisfaction from producing a functional app which solved a problem. I'm even considering buying an Android tablet so that I can use my app to collect my own favourite recipes and then cook them in my kitchen. Friends and family were impressed and I found the whole process very rewarding.
 
 
+SCREENSHOT
+
+<img src="https://github.com/reidch/Android_recipe_list_app/blob/master/Screenshots/screenshot_home_activity.jpeg" alt="Recipe Pot home activity" width="250" />
+
+
 LEARNING POINTS
 
 Improved time management throughout the app development process, compared to my previous week-long project.
