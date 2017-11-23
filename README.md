@@ -27,6 +27,8 @@ SCREENSHOT
 <img src="https://github.com/reidch/Android_recipe_list_app/blob/master/Screenshots/screenshot_home_activity.jpeg" alt="Recipe Pot home activity" width="250" />
 
 
+<img src="https://github.com/reidch/Android_recipe_list_app/blob/master/Screenshots/screenshot_add_recipe.jpeg" alt="Add Recipe activity" width="250" />
+
 LEARNING POINTS
 
 Improved time management throughout the app development process, compared to my previous week-long project.
