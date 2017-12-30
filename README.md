@@ -1,4 +1,4 @@
-# Recipe_Pot_app
+# Recipe Pot app
 
 THE BRIEF
 
