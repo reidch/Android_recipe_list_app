@@ -1,4 +1,4 @@
-# Android_recipe_list_app
+# Recipe_Pot_app
 
 THE BRIEF
 
